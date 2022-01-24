@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Estilo customizado -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <title>Finans - finanças pessoais</title>
+  </head>
+  <body>
+
+    <!--PARA LOGO E BARRA DE NAVEGAÇAO-->
+    <header><!--INICIO CABEÇALHO-->
+      <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <div class="container">
+
+          <!--LOGO-->
+          <a href="#" class="navbar-brand">
+            <img src="img/logo.png" width="142"><!--LARGURA DO LOGO-->
+          </a><!--LOGO-->
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Beneficios</a>
+              </li>  
+              <li class="nav-item">
+                <a href="" class="nav-link">Preços</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="btn btn-outline-light ml-4">Entrar</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header><!--FIM CABEÇALHO-->
+
+    <section id="home"><!--INICIO DA SEÇAO HOME-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex"><!--TEXTO DA SECÇÃO--><!--dflex para converter a div em flex box-->
+            <div class="align-self-center">
+              <h1 class="display-4">Suas contas, descolplicadas</h1>
+              <p>
+                Usado por mais de 1 milhão de pessoas, o finans é uma ferramenta online que vai facilitar sua vida financeira.
+              </p>
+
+              <form class="mt-4 mb-4"><!--INICIO DO FORMULARIO-->
+                <div class="input-group input-group-lg">
+                  <input type="text" placeholder="Seu e-mail" class="form-control">
+                  <div class="input-group-append"><!--JUNTA O INPUT COM O BOTAO-->
+                    <button type="button" class="btn-primary">Cadastre-se</button>
+                  </div>
+                </div>
+              </form><!--FIM DO FORMULARIO-->
+
+              <p>Disponivel para
+                <a href="" class="btn btn-outline-dark">
+                  <i class="fab fa-android fa-lg"></i><!--fa-lg PARA FICAR MAIOR-->
+                </a>
+                <a href="" class="btn btn-outline-dark">
+                  <i class="fab fa-apple"></i><!--fa-lg PARA FICAR MAIOR-->
+                </a>
+              </p>
+
+
+
+
+            </div>
+          </div><!-- FIM TEXTO DA SECÇÃO-->
+          <div class="col-md-6 d-none d-lg-block"><!--d-none = display nenhum /d-lg-block FAZ COM QUE A IMAGEM SO APAREÇA QND A SCREEN FOR MAIOR-->
+            <img src="img/capa-mulher.png">
+          </div>
+        </div>
+      </div>
+    </section><!--FIM DA SEÇÃO HOME-->
+
+    <section class="caixa"><!--INICIO DA SEÇÃO SAIBA-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex ">
+            <div class="align-self-center">
+              <h2>Saiba para ond evai o dinheiro</h2>
+              <p>
+                Com o Finans, você categoriza todos os seus lançamentos com gráficos simples, voce save de onde vem e para onde vai o ser dinheiro.
+              </p>
+              <a href="" class="btn btn-primary">Veja mais</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="img/saiba.png" class="img-fluid"><!--img-fluid, PARA ACERTAR A IMAGEM -->
+          </div>
+        </div>
+      </div>
+    </section><!--FIM DA SEÇÃO SAIBA-->
+
+    <section class="caixa"><!--INICIO DA SEÇÃO JUROS-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/juros.png" class="img-fluid"><!--img-fluid, PARA ACERTAR A IMAGEM -->
+          </div>
+          <div class="col-md-6 d-flex ">
+            <div class="align-self-center">
+              <h2>Saiba para ond evai o dinheiro</h2>
+              <p>
+                Com o Finans, você categoriza todos os seus lançamentos com gráficos simples, voce save de onde vem e para onde vai o ser dinheiro.
+              </p>
+              <a href="" class="btn btn-primary">Veja mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!--FIM DA SEÇÃO JUROS-->
+
+    <section class="caixa"><!--INICIO DA SEÇÃO RECURSOS-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/facil.png" class="img-fluid">
+            <h4>Fácil de usar</h2>
+              <p>
+                O Finans vai além do básico e permite que voçê faça controles, incriveis, essenciais para as suas finanças. Simples como tem que ser!
+              </p>
+          </div>
+          <div class="col-md-4">
+            <img src="img/economize.png" class="img-fluid">
+            <h4>Economize o seu tempo</h2>
+              <p>
+                Tempo é dinheiro! Em segundos, voçê tem tudo sob controle e aproveite seu tempo com o que realmente importa para voçê!
+              </p>
+          </div>
+          <div class="col-md-4">
+            <img src="img/suporte.png" class="img-fluid">
+            <h4>Suporte amigo</h2>
+              <p>
+                Dúvidas? Perguntas? Nosso suporte super legal ajuda voçê! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!
+              </p>
+          </div>
+        </div>
+      </div>
+    </section><!--FIM DA SEÇÃO RECURSOS-->
+
+    <!--RODAPÉ-->
+    
+    <footer class="mt-4 mb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <a href="">Home</a>
+              <a href="">Recursos</a>
+              <a href="">Benefícios</a>
+              <a href="">Preços</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="" class="btn btn-outline-dark">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark">
+              <i class="fas fa-envelope-open-text"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+    
+    <!--/fim seção home -->
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+--------------------------------------------------
+CSS-----------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+#home {
+	background: #ffc107;
+	color: white;
+}
+.caixa {
+	padding: 60px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+footer p a {
+	margin: 5px 15px;
+}
+
