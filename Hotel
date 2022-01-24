@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Chalé Hotel</title>
+</head>
+
+<body>
+    
+    <!--Inicio do container-->
+    <div id="container">
+
+        <!--Inicio do topo-->
+        <div id="topo">
+
+            <div id="area-logo">
+                <h1 class="logo">
+                    <a href="index.html">Chalé Hotel</a>
+                </h1>
+            </div>
+
+            <div id="area-menu">
+                <div id="conteudo-menu">
+                    <div id="menu-locais">
+                        <span class="locais">
+                            Rio de Janeiro - São Paulo - Belo Horizonte
+                        </span>
+                        <a class="reserva" href="">Reservar</a>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+
+                <div id="menu">
+                    <ul id="navegacao">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">História</a></li>
+                        <li><a href="">Imprensa</a></li>
+                        <li><a href="">Gastronomia</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+
+                    <img class="depoimento" src="imagens/depoimento.png">
+                </div>
+            </div>
+
+        </div><!--Fim do topo-->
+
+        <!--Inicio area princiapl-->
+        <div id="area-principal">
+            <div class="conteudo">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquam erat, nec porttitor tortor. Vestibulum faucibus dui vitae lacus tincidunt molestie. Proin eu nulla ultricies, accumsan tortor vitae, ornare eros. Vivamus id elementum odio, vitae pharetra diam. Suspendisse a mi at tortor iaculis mattis
+                </p>
+                <p>
+                     Accumsan tortor vitae, ornare eros. Vivamus id elementum odio, vitae pharetra diam. Suspendisse a mi at tortor iaculis mattis. Curabitur vehicula lacus ut mattis convallis. In dapibus urna sapien, et pharetra erat vestibulum in. Sed augue ante, pellentesque in diam bibendum, sodales commodo dolor. Praesent sit amet hendrerit tellus, quis efficitur nunc.
+                </p>
+                <p>
+                     Sodales commodo dolor. Praesent sit amet hendrerit tellus, quis efficitur nunc.
+               </p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquam erat, nec porttitor tortor.
+
+               </p>
+            </div>
+        </div><!--Fim area principal-->
+
+        <!--Inicio area lateral-->
+        <div id="area-lateral">
+            <div class="conteudo">
+                <ul id="beneficios">
+                    <li>
+                        <a href="">
+                            <img src="imagens/apartamento.jpg" width="150px" alt="Apartamento">
+                            <h2>Apartamento</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquam erat, nec porttitor tortor.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="imagens/restaurante.jpg" width="150px" alt="Restaurante">
+                            <h2>Restaurante</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquam erat, nec porttitor tortor.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="imagens/piscina.jpg" width="150px" alt="Piscina">
+                            <h2>Piscina</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquam erat, nec porttitor tortor.</p>
+                        </a>
+                    </li>
+                </ul>   
+            </div>
+        </div><!--Fim area lateral-->
+
+        <div id="rodape">
+            <span>
+                &copy; Copyright 2000-2021 Chalé Hotel
+            </span>
+        </div>
+    </div><!--Fim do container-->
+
+</body>
+
+</html>
+
+-------------------------------
+CSS----------------------------
+-------------------------------
+-------------------------------
+
+
+/************
+Estrutura do site
+************/
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    background: #fff url(../imagens/bg.png);
+    margin: 12px;
+}
+
+#container {
+    background: #ede9cc url(../imagens/bg-container.png) top center repeat-y;
+    margin: 0 auto;
+    min-width: 760px;
+    max-width: 1210px;
+}
+
+#topo {
+    position: relative;
+    background: #dbcd87;
+    height: 15.4em;
+    min-height: 240px;
+}
+
+#area-logo {
+    position: absolute;
+    background: url(../imagens/topo-imagem-principal2.png) no-repeat;
+    width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.logo a {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    background: url(../imagens/logo.png) no-repeat;
+    width: 151px;
+    height: 66px;
+    text-indent: -9000px;
+}
+
+#area-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../imagens/topo-imagem-lateral.png) no-repeat;
+    width: 450px;
+    height: 250px;
+    z-index: 2;
+}
+
+#conteudo-menu {
+    margin-left: 85px;
+    margin-right: 15px;
+    padding-top: 15px;
+}
+
+#menu-locais {
+    border-bottom: solid 1px #b5ab56;
+    border-top: solid 1px #b5ab56;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.7em;
+    color: #8b8448;
+}
+
+#menu-locais .locais {
+    float: left;
+    line-height: 2.1em;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a.reserva {
+    text-transform: uppercase;
+    background: #a29750;
+    color: #fff5b0;
+    padding: 5px 10px;
+    float: right;
+}
+
+/***************
+Barra de navegação Vertical
+*************/
+
+#menu {
+    margin-left: 85px;
+    margin-right: 15px;
+    padding-top: 15px;
+
+}
+
+ul#navegacao a {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px;
+    color: #6e672c;
+    line-height: 27px;
+}
+
+ul#navegacao a:hover {
+    background: #fdf6be;
+}
+
+
+ul {
+    list-style: none;
+
+}
+
+ul#navegacao {
+    float: left;
+}
+
+
+
+
+.depoimento {
+    width: 226px;
+    height: 164px;
+    float: right;
+}
+
+/************
+Area de conteudos 
+************/
+
+#area-principal {
+    float: left;
+    width: 50%;
+    background: url(../imagens/bg-area-principal.png) top left repeat-x;
+    padding: 15px 0px;
+}
+
+#area-lateral {
+    float: right;
+    width: 50%;
+    background: url(../imagens/bg-area-lateral.png) top left repeat-x;
+    padding: 20px 0px;
+}
+
+
+
+.conteudo {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/**************
+Formatacoes da area lateral
+********/
+
+#beneficios li {
+    padding: 8px;
+    border-bottom: solid 1px #f3efcb;
+    height: 6em;
+
+}
+
+#beneficios li a img {
+    float: left;
+    margin-right: 8px;
+}
+
+#beneficios li a p {
+    color: #000;
+    font-size: 0.8em;
+} 
+
+#beneficios li a h2 {
+    font-size: 1.2em;
+    background: url(../imagens/ornamento.png) no-repeat center right;
+    color: #615b2d;
+    padding: 5px 0;
+
+} 
+
+#beneficios li:hover {
+    background: #f6f3d6;
+    cursor: pointer;
+
+}
+
+
+
+#rodape {
+    clear: both;
+    padding: 16px;
+    background: #fff url(../imagens/bg-rodape.png) repeat-x top;
+    color: #7d7640;
+}
+
+
+
+
+/*****************
+Formataçoes de texto
+************/
+h2 {
+    color: #7d7640;
+    font-size: 1.1em;
+    padding: 5px 0px;
+
+}
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
