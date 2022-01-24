@@ -1,0 +1,425 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Orçamento pessoal</title>
+
+		<!-- Bootstrap início -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <script src="app.js"></script>
+
+
+
+	</head>
+
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+           <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consulta.html">Consulta</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col mb-5">
+          <h1 class="display-4">Registro de nova despesa</h1>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-2">
+          <select class="form-control" id="ano">
+            <option value="">Ano</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2021">2022</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-control" id="mes">
+            <option value="">Mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+        </div>
+        
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Dia" id="dia" />
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-control" id="tipo">
+            <!--o value do tipo fica vazio para ele nao assumir a propria descriçao e nao ter asism valor nenhum-->
+            <option value="">Tipo</option>
+            <option value="1">Alimentação</option>
+            <option value="2">Educação</option>
+            <option value="3">Lazer</option>
+            <option value="4">Saúde</option>
+            <option value="5">Transporte</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
+        </div>
+
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Valor" id="valor" />
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" onclick="cadastrarDespesa()">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+<!-- Modal sucesso -->
+<div class="modal fade" id="modalResgistoDespesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id="modal_titulo_div">
+        <h5 class="modal-title" id="modal_titulo">Registo inserido com sucesso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id='modal_conteudo'>
+        Despesa foi adicionada com sucesso
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="modal_btn">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>	
+
+</html>
+
+
+------------------------------------
+JAVASCRIPT--------------------------
+------------------------------------
+class Despesa {
+
+    constructor(ano, mes, dia, tipo, descricao, valor) {
+
+        this.ano = ano
+        this.mes = mes
+        this.dia = dia
+        this.tipo = tipo
+        this.descricao = descricao
+        this.valor = valor
+        
+    }
+
+    validarDados() {
+
+        for (let i in this) {
+
+            if(this[i] == undefined || this[i] == '' || this[i] == null) {
+
+                return false
+
+            } else {
+
+                return true
+            }
+
+        }
+
+    }
+
+}
+
+class Bd {
+
+    constructor() {
+
+        let id = localStorage.getItem('id')
+        //se o ainda nao existir nada armazenado 
+        if (id === null) {
+
+            localStorage.setItem('id', 0)
+        } 
+    }
+
+    getProximoId() {
+
+        //getItem serve p+ara recuperar um dado algoado dentro de localStorage
+      let proximoId = localStorage.getItem('id')
+      return parseInt(proximoId) + 1
+
+
+    }
+
+    gravar(d) {
+
+        //setItem serve para inserir um dado dentro de localStorage
+        let id = this.getProximoId()
+
+        localStorage.setItem(id, JSON.stringify(d))
+
+        //sempre qe adicionar 
+        localStorage.setItem('id', id)
+
+    }
+
+    recuperarTodosRegistos() {
+
+        let despesas = Array()
+
+        let id = localStorage.getItem('id')
+
+        //recupera todas as despesas registadas em local storage
+        for (let i = 1; i <= id; i++) {
+
+            let despesa = JSON.parse(localStorage.getItem(i))
+
+            if (despesa == null) {
+
+                continue
+
+            } 
+                despesa.id = i
+                despesas.push(despesa)
+            
+
+        }
+
+        return despesas
+    }
+    
+    pesquisar(despesa) {
+
+        let despesasFiltradas = Array()
+
+        despesasFiltradas = this.recuperarTodosRegistos()
+
+        console.log(despesasFiltradas)
+
+
+        //ano
+        //o que isto estaa a fazer é comparar o despesasFiltradas qe é o dado qe temos a ver se é igual a despesa ano indo assim buscar a informaçao
+        if (despesa.ano != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano) 
+        }
+        //mes
+        if (despesa.mes != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes) 
+        }
+        //dia
+        if (despesa.dia != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.dia == despesa.dia) 
+        }
+        //tipo
+        if (despesa.tipo != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.tipo == despesa.tipo) 
+        }
+        //descricao
+        if (despesa.descricao != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.descricao == despesa.descricao) 
+        }
+        //valor
+        if (despesa.valor != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor) 
+        }
+
+        return despesasFiltradas
+    }
+    remover(id) {
+
+        localStorage.removeItem(id)
+
+    }
+}
+    let bd = new Bd()
+
+
+
+function cadastrarDespesa() {
+
+    //ID'S --> ano, mes, dia, descricao, tipo, valor
+
+    //quando clicar no botao de adicionar esta ação vai buscar o valor inserido pelo user, dai o uso de "descricao.value" o .value faz isso por nos retirando assim o valor
+
+    let ano = document.getElementById('ano')
+    let mes = document.getElementById('mes')
+    let dia = document.getElementById('dia')
+    let tipo = document.getElementById('tipo')
+    let descricao = document.getElementById('descricao')
+    let valor = document.getElementById('valor')
+
+   
+
+    let despesa = new Despesa(
+        ano.value, 
+        mes.value, 
+        dia.value, 
+        tipo.value, 
+        descricao.value, 
+        valor.value
+    )
+    // ao passar outra class em gravar vai fazer com qe adicione a lista despesa ao invez de repor
+    if(despesa.validarDados()) {
+        bd.gravar(despesa)
+    
+        $('#modalResgistoDespesa').modal('show')
+        document.getElementById('modal_titulo').innerHTML = 'Registo inserido com sucesso'
+
+        document.getElementById('modal_titulo_div').className = 'modal-header text-success'
+
+        document.getElementById('modal_conteudo').innerHTML = 'Despesa foi adicionada com sucesso'
+        
+        document.getElementById('modal_btn').innerHTML = 'Voltar'
+
+        document.getElementById('modal_btn').className = 'btn btn-success'
+        
+        ano.value = ''
+        mes.value = ''
+        diatipo.value = ''
+        descricao.value = ''
+        valor.value = ''
+    } else {
+
+        $('#modalResgistoDespesa').modal('show')
+        document.getElementById('modal_titulo').innerHTML = 'Erro ao adicionar o registo'
+        document.getElementById('modal_titulo_div').className = 'modal-header text-danger'
+
+        document.getElementById('modal_conteudo').innerHTML = 'Erro na gravação verifique se todos os campos foram preenchidos corretamente!'
+
+        document.getElementById('modal_btn').innerHTML = 'Voltar e Corrigir'
+        document.getElementById('modal_btn').className = 'btn btn-danger'
+    }
+    
+}
+
+
+function gravar(d) {
+    //esta opçao retorna par anos um objeto de manipulaçao do local storage do browser que nos da acesso a alguns metodos como por exemplo setItem
+    //setItem permite passar 2 parametros, o primeiro e a identificação do objeto e o segundo é o dado qe queremos armazenar
+    //o que estou a fazer aqui em baixo é passar o objeto despesa para JSON usando localStorage
+    localStorage.setItem('despesa', JSON.stringify(d))
+
+}
+
+function carregaListaDespesas(despesas = Array(), filtro = false) {
+
+    if (despesas.length == 0 && filtro == false) {
+        despesas = bd.recuperarTodosRegistos()
+    }
+    let listaDespesas = document.getElementById('listaDespesas')
+    listaDespesas.innerHTML = ''
+
+    //percorrer o array despesas, par alistar cada despesa de forma dinamica
+    despesas.forEach(function(d) {
+
+        //cirar a linha (tr)
+        let linha = listaDespesas.insertRow()
+
+        //criar as colunas (td)
+        linha.insertCell(0).innerHTML = `${d.dia} / ${d.mes} / ${d.ano}`
+    
+
+        switch(d.tipo) {
+
+            case '1': d.tipo = 'Alimentação'
+            break
+            case '2': d.tipo = 'Educação'
+            break
+            case '3': d.tipo = 'Lazer'
+            break
+            case '4': d.tipo = 'Saúde'
+            break
+            case '5': d.tipo = 'Transporte'
+            break
+
+
+        }
+
+        linha.insertCell(1).innerHTML = d.tipo
+        linha.insertCell(2).innerHTML = d.descricao
+        linha.insertCell(3).innerHTML = `-${d.valor}€`
+
+        //criar botao de exclusao
+        let btn = document.createElement("button")
+        btn.className = 'btn btn-danger'
+        btn.innerHTML = '<i class="fas fa-times"></i>'
+        btn.id = `id_despesa_${d.id}`
+        btn.onclick = function() {
+            //remover despesa
+            let id = this.id.replace('id_despesa_', '')
+
+            //alert(id)
+
+            bd.remover(id)
+
+            window.location.reload()
+        }
+        linha.insertCell(4).append(btn)
+        console.log(d)
+    })
+}
+
+
+function pesquisarDespesa() {
+
+    let ano = document.getElementById('ano').value
+    let mes = document.getElementById('mes').value
+    let dia = document.getElementById('dia').value
+    let tipo = document.getElementById('tipo').value
+    let descricao = document.getElementById('descricao').value
+    let valor= document.getElementById('valor').value
+
+    let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+
+    let despesas = bd.pesquisar(despesa)
+
+    carregaListaDespesas(despesas, true)
+}
+
