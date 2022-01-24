@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <title>Museu Nacional</title>
+</head>
+<body>
+    
+    <div id="container"><!--Inicio do CONTAINER-->
+
+        <header><!--Inicio do HEADER-->
+
+            <div id="logo">
+                <h1><a href="">Museu Nacional</a></h1>
+            </div>
+
+            <nav><!--Inicio da NAV-->
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Exposições</a></li>
+                    <li><a href="#">Pesquisa</a></li>
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav><!--Fim da NAV-->
+
+        </header><!--Fim do HEADER-->
+
+        <div id="principal"><!--Inicio PRINCIPAL-->
+
+            <div id="conteudo">
+                <section id="capa">
+                    <img src="imagens/museu.png">
+                </section>
+            
+
+                <section id="postagens">
+                
+                    <article id="video">
+                        <h3>Vídeo: conheça o museu</h3>
+                        <iframe width="310" height="170" src="https://www.youtube.com/embed/RGUYb-hivrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </article>
+
+                    <article id="mapa">
+                        <h3>Mapa: encontre o museu</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206445593926!2d-43.22871758441842!3d-22.90575504359425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu%20Nacional%20-%20UFRJ!5e0!3m2!1spt-PT!2spt!4v1634117623217!5m2!1spt-PT!2spt" width="310" height="170" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </article>
+                    
+                    <article id="exposicoes">
+                        <h3>Exposições</h3>
+                        <ul>
+                            <li>
+                                <a href="">Os assustadores insetos</a>
+                            </li>
+                            <li>
+                                <a href="">O crânio de Luzia, a mulher mais antiga do brasil</a>
+                            </li>
+                            <li>
+                                <a href="">Preguiça gigante e tigre-dentes.de.sabre</a>
+                            </li>
+                            <li>
+                                <a href="">Plantas do Brasil Central</a>
+                            </li>
+                            <li>
+                                <a href="">Teresa Cristina: A Imperatriz Arqueóloga</a>
+                            </li>
+                            <li>
+                                <a href="">Arte com Dinossauros- Paleoarte</a>
+                            </li>
+                            <li>
+                                <a href=""><strong>Veja tgodos (65)</strong></a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article id="historia">
+                        <h3>200 anos de História</h3>
+                        <p>
+                            Numa ponta que ameaçava sobre o mar, posteriormente conhecida como Ponta do calabouço, entre as praias de Piaçaba e Santa Luzia, no centro histórico do rio de Janeiro, os portugueses construiram em 1603 a Fortaleza de Santiago, origem do conjunto arquitetônico que hoje abriga o museu Histórico Nacional.
+                        </p>
+                        <a href=""><strong>Ler mais</strong></a>
+                    </article>
+            
+                <section>
+            </div>
+
+            <aside>
+                <section id="depoimento">
+                    <img src="imagens/depoimento.png">
+                </section>
+
+                <section id="visita"><!--Inicio secao VISITA-->
+                    <h4>Faça uma visita</h4>
+                    <form>
+                        <fieldset>
+                            <legend>Selecione uma data</legend>
+
+                            <label for="data">Data</label>
+                            <input class="campo" type="text" id="data" value="dd/mm/aaaa">
+                            <br>
+                            <label for="qtd">Número de pessoas</label>
+                            <input class="campo" style="width: 30px;" type="text" id="qtd" value="1">
+                        </fieldset>
+
+                        <input class="botao" type="submit" value="Verificar disponibilidade">
+
+                    </form>
+                </section> <!--Fim secao VISITA-->
+
+                <section id="galeria">
+                    <h4>Galeria de fotos</h4>
+
+                    <a href="">
+                        <img src="imagens/imagem1.jpg" height="93px" width="93px">
+                    </a>
+
+                    <a href="">
+                        <img src="imagens/imagem2.jpg" height="93px" width="93px">
+                    </a>
+
+                    <a href="">
+                        <img src="imagens/imagem3.jpg" height="93px" width="93px">
+                    </a>
+
+                    <a href="">
+                        <img src="imagens/imagem4.jpg" height="93px" width="93px">
+                    </a>
+
+                </section>
+
+            </aside>
+
+            <footer>
+                <p>
+                    <a href="#">Home</a>
+                    <a href="#">Exposições</a>
+                    <a href="#">Pesquisa</a>
+                    <a href="#">Acervo</a>
+                    <a href="#">Vídeos</a>
+                    <a href="#">Fotos</a>
+                    <a href="#">Contato</a>
+
+                </p>
+                <p>
+                    2019 <a href="">Museu Nacional</a> - Todos os direitos reservados.
+                </p>
+            </footer>
+
+        </div><!--Fim PRINCIPAL-->
+
+    </div><!--Fim do CONTAINER-->
+
+</body>
+</html>
+
+----------------------------------------
+CSS-------------------------------------
+---------------------------------------
+----------------------------------------
+/* Estrutura do site
+------------------------------------- */
+
+body {
+    background: #f3f2ec url(../imagens/fundo.png) repeat-x;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+
+}
+
+
+/* Criação do container da pagina toda, com uma width de 1080px (a mais recomendada) */
+/* Centralizacão do conteudo da pagina usando margin: 0 auto; */
+
+#container {
+    width: 1080px;
+    /* Centralização do conteudo */
+    margin: 0 auto;
+}
+
+/* Cor global dos links | Sem decoração de link */
+
+a:link, a:active, a:visited {
+    color: #af670a;
+    text-decoration: none;
+}
+
+/* cor dos links qnd passo o rato por cima */
+a:hover {
+    color: #227155;
+}
+
+/* Logo
+------------------------------------- */
+
+/* passar o logo para a esquerda  */
+#logo h1 {
+    float: left;
+
+}
+
+/* Defenir a largura e altura qe eu quero qe o logo tenha, neste caso a altura e largura que estou a usar é original da imagem */
+/* display block serve para ocupar o espaço que necessita em largura e para remover o texto que esta em html, e assim pode usar a imagem qe esta em css */
+/* o background tem a imagem com no-repeat px nos n queremos qe o logo seja repetido */
+#logo a {
+    /* Altura e largura da imagem do logo */
+    width: 248px;
+    height: 21px;
+    /* Para tirar o texto quando o css estiver a funcionar corretamente, se nao estiver o texto volta */
+    text-indent: -9999px;
+    display: block;
+    background: url(../imagens/logo.png) no-repeat;
+}
+
+/* Barra de navegação
+------------------------------------- */
+
+/* O padding é para eu ganhar espaço a volta dos meus items (logos e barra de navegação) */
+/* A height é a altura que tem o header*/
+header {
+    padding: 15px 0;
+    height: 55px;
+
+}
+
+/* list style none; para tirar os pontos das listas da nav-bar  */
+/* a margin de 20px serve para a nav-bar ter um espaço entre todos os outros items */
+/* float right serve para o nav-bar se posicionar a direita do nosso header */
+nav ul {
+    list-style: none;
+    margin: 20px;
+    float: right;
+
+}
+
+/* aqui o 'float left' serve para os items dentro da nossa ul estarem da esquerda para a direita ou seja home->esposicoes->pesquisa.. Caso tivese 'float right' eles estariam Contato->Fotos->Videos.. */
+nav ul li {
+    float: left;
+
+}
+
+/* display block para os links da lista ocuparem o espaço qe necessitam */
+/* margin right para criar espaçamento entre os links */
+/* um padding bottom de 3 px para criar espaço a volta dos links */
+/* uppercase para por as letras todas em uppercase */
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+/* uma border-bottom para quando passar o rato por cima apresentar uma linha fina por baixo */
+nav ul li a:hover {
+    border-bottom: solid 1px #535858;
+
+}
+
+
+/* Principal
+------------------------------------- */
+
+/* width 710px para o conteudo principal da pagina ou seja 710px em 1080 que foi o que pus no container da pagina toda */
+/* float left porque vamos ter dois conteudos o principal e o aside assim puxamos para a esquerda o principal e deixamos espaço apra o aside  */
+/* uma margin bottom para dar espaçamento entre o conteudo principal da pagina e o rodape */
+#conteudo {
+    width: 710px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* width de 350px porque 710px + 350px = 1060 que é -20 px do espaçamento do conteudo principal ou seja assim sobra um espaçamento 20px para ter entre o conteudo principal e o aside  */
+/* float right para posicionar o aside a direita  */
+/* um padding bottom para ganhar espaço em baixo dos conteudos */
+/* margin-bottom para dar espaçamento entre o rodape e o conteudo aside cm fiz com o conteudo principal */
+aside {
+    width: 350px;
+    float: right;
+    background: #ebe7dd;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* background para  acor de fundo no plano de visitas */
+/* um padding para criar espaço a volta do texto */
+/* margin top para espaçamento da imagem que se encontra acima */
+section#visita {
+    background: #cdc8b1;
+    padding: 10px 27px 27px 27px;
+    margin-top: 10px;
+}
+
+/* float left para por o item a esquerda ja que o aside esta a ocupar o lado direito, ou seja é necessario usar float left para os itemos todos sendo 1, 2 ou 3 items pois o aside ja tem float right */
+/* width de 310px porque o conteudo principal é de 710px ou seja tendo 310*2 = 620px ou seja sobra 90px para poder haver espaçamentro entre os dois conteudos principais */
+/* margin left para n estar alinhado com o conteudo de cima */
+article#video {
+    float: left;
+    width: 310px;
+    margin-left: 25px;
+}
+
+
+/* Exatamente a mesma coisa qe o de cima so muda a margin left para dar um espaçamento maior entre os dois items do conteudo principal */
+article#mapa {
+    float: left;
+    width: 310px;
+    margin-left: 37px;
+}
+
+/* Exatamente a mesma coisa qe o primeiro */
+article#exposicoes {
+    float: left;
+    width: 310px;
+    margin: 15px 0 0 25px;
+}
+
+/* Exatamente a mesma coisa qe o de cima so muda a margin left para dar um espaçamento maior entre os dois items do conteudo principal */
+article#historia {
+    float: left;
+    width: 310px;
+    margin: 15px 0 0 37px;
+}
+
+
+h4 {
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #227115;
+    font-size: 1.0em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Formulários
+------------------------------------- */
+
+
+
+input {
+    height: 20px;
+    width: 80px;
+    background: #fff;
+    border: none;
+    font-size: 1em;
+}
+
+input.campo {
+    border: solid 1px #ada484;
+
+}
+
+input.botao {
+    background: #9b9271;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+
+}
+
+input.botao:hover {
+    cursor: pointer;
+    
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    display: none;
+}
+
+/* Imagens da Galeria
+------------------------------------- */ 
+
+section#galeria {
+
+    padding: 0 27px 0 27px;
+}
+
+section#galeria a {
+    display: block;
+    background: url(../imagens/fundo-foto.png) no-repeat;
+    float: left;
+    padding: 17px 15px 18px 15px;
+    margin: 10px 0 0 20px;
+}
+
+section#galeria img {
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+/* Rodapé
+------------------------------------- */ 
+
+footer {
+    clear: both;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background: url(../imagens/fundo-rodape.png) no-repeat center top;
+}
+
+footer>p a {
+    padding: 2px 10px;
+
+}
+
+
+
